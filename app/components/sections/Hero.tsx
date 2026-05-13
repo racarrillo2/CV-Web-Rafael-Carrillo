@@ -83,7 +83,7 @@ export default function Hero() {
             <div className="relative flex justify-center lg:justify-end">
               <div className="relative">
                 <motion.div
-                  className="w-64 h-80 md:w-80 md:h-96 rounded-2xl bg-gradient-to-br from-accent/20 to-accent-hover/10"
+                  className="rounded-2xl bg-gradient-to-br from-accent/20 to-accent-hover/10"
                   animate={{
                     boxShadow: [
                       "0 0 60px rgba(59, 130, 246, 0.2)",
@@ -94,16 +94,15 @@ export default function Hero() {
                   transition={{ duration: 3, repeat: Infinity }}
                 />
 
-                <div className="absolute inset-0 flex items-center justify-center p-3">
-                  <div className="w-full h-full rounded-xl overflow-hidden border-2 border-accent/20 shadow-inner">
+                <div className="rounded-xl overflow-hidden border-2 border-accent/20 shadow-inner">
                     <Image
-                      src="/perfil.jpg"
+                      src="/foto_rafael.jpg"
                       alt="Foto de Rafael Carrillo"
-                      fill
-                      className="w-full h-full object-cover object-center"
-                      sizes="(max-width: 768px) 320px, 320px"
+                      width={300}
+                      height={400}
+                      className="w-auto h-auto max-w-[300px] max-h-[400px]"
+                      unoptimized
                     />
-                  </div>
                 </div>
               </div>
             </div>

@@ -1,32 +1,30 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Link, Code, Mail } from "lucide-react";
+import Image from "next/image";
 import FadeIn from "../ui/FadeIn";
 import SectionTitle from "../ui/SectionTitle";
 import Button from "../ui/Button";
+import { Mail } from "lucide-react";
 
 const contactMethods = [
   {
-    icon: Link,
+    image: "/imagen_linkedin.svg",
     label: "LinkedIn",
     description: "Conectemos profesionalmente",
     href: "https://www.linkedin.com/in/rafael-carrillo-mirabal/",
-    color: "from-blue-600 to-blue-700",
   },
   {
-    icon: Code,
+    image: "/imagen_github.svg",
     label: "GitHub",
     description: "Explora mi código",
     href: "https://github.com/racarrillo2",
-    color: "from-gray-700 to-gray-800",
   },
   {
-    icon: Mail,
+    image: "/imagen_gmail.svg",
     label: "Email",
     description: "racm171193@hotmail.com",
     href: "mailto:racm171193@hotmail.com",
-    color: "from-red-500 to-red-600",
   },
 ];
 
@@ -51,10 +49,16 @@ export default function Contact() {
                   whileHover={{ y: -4 }}
                 >
                   <motion.div
-                    className={`w-14 h-14 rounded-xl mx-auto mb-4 flex items-center justify-center bg-gradient-to-br ${method.color}`}
+                    className="w-14 h-14 rounded-xl mx-auto mb-4 flex items-center justify-center"
                     whileHover={{ scale: 1.1 }}
                   >
-                    <method.icon className="text-white" size={24} />
+                    <Image
+                      src={method.image}
+                      alt={method.label}
+                      width={32}
+                      height={32}
+                      className="w-8 h-8"
+                    />
                   </motion.div>
                   <h3 className="text-lg font-semibold text-foreground mb-1 group-hover:text-accent transition-colors">
                     {method.label}
