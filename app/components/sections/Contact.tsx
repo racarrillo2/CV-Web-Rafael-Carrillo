@@ -11,21 +11,21 @@ const contactMethods = [
     icon: Link,
     label: "LinkedIn",
     description: "Conectemos profesionalmente",
-    href: "https://linkedin.com/in/rafael-carrillo",
+    href: "https://www.linkedin.com/in/rafael-carrillo-mirabal/",
     color: "from-blue-600 to-blue-700",
   },
   {
     icon: Code,
     label: "GitHub",
     description: "Explora mi código",
-    href: "https://github.com/rafael-carrillo",
+    href: "https://github.com/racarrillo2",
     color: "from-gray-700 to-gray-800",
   },
   {
     icon: Mail,
     label: "Email",
-    description: "rmc.analyst@gmail.com",
-    href: "mailto:rmc.analyst@gmail.com",
+    description: "racm171193@hotmail.com",
+    href: "mailto:racm171193@hotmail.com",
     color: "from-red-500 to-red-600",
   },
 ];
@@ -76,7 +76,7 @@ export default function Contact() {
                 Siempre estoy abierto a nuevas oportunidades y proyectos
                 interesantes.
               </p>
-              <Button href="mailto:rmc.analyst@gmail.com" variant="primary">
+              <Button href="mailto:racm171193@hotmail.com" variant="primary">
                 <Mail size={18} />
                 Envíame un mensaje
               </Button>

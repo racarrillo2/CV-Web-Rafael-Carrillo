@@ -8,17 +8,17 @@ const currentYear = new Date().getFullYear();
 const socialLinks = [
   {
     icon: Link,
-    href: "https://linkedin.com/in/rafael-carrillo",
+    href: "https://www.linkedin.com/in/rafael-carrillo-mirabal/",
     label: "LinkedIn",
   },
   {
     icon: Code,
-    href: "https://github.com/rafael-carrillo",
+    href: "https://github.com/racarrillo2",
     label: "GitHub",
   },
   {
     icon: Mail,
-    href: "mailto:rmc.analyst@gmail.com",
+    href: "mailto:racm171193@hotmail.com",
     label: "Email",
   },
 ];

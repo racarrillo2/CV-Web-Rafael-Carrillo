@@ -9,7 +9,7 @@ const projects = [
     description:
       "Dashboard interactivo para análisis de ventas con visualizaciones en Power BI. Incluye métricas clave, tendencias y segmentación de clientes.",
     technologies: ["Python", "Power BI", "Excel", "SQL"],
-    githubLink: "https://github.com",
+    githubLink: "https://github.com/racarrillo2",
     demoLink: "https://app.powerbi.com",
   },
   {
@@ -17,21 +17,21 @@ const projects = [
     description:
       "Modelo predictivo para identificar clientes en riesgo de cancelación. Análisis exploratorio y visualización de patrones de comportamiento.",
     technologies: ["Python", "Pandas", "Scikit-learn", "Matplotlib"],
-    githubLink: "https://github.com",
+    githubLink: "https://github.com/racarrillo2",
   },
   {
     title: "Financial Report Automation",
     description:
       "Automatización de reportes financieros usando Python y Excel. Reducción del tiempo de elaboración de informes en un 70%.",
     technologies: ["Python", "Excel", "Pandas", "OpenPyXL"],
-    githubLink: "https://github.com",
+    githubLink: "https://github.com/racarrillo2",
   },
   {
     title: "Market Basket Analysis",
     description:
       "Análisis de cesta de compras para identificar patrones de compra. Implementación de algoritmo Apriori para reglas de asociación.",
     technologies: ["Python", "MLxtend", "SQL", "Tableau"],
-    githubLink: "https://github.com",
+    githubLink: "https://github.com/racarrillo2",
   },
 ];
 
