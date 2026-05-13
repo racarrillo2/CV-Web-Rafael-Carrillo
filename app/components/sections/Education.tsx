@@ -33,7 +33,7 @@ const education = [
 
 export default function Education() {
   return (
-    <section className="py-24 md:py-32 bg-background-secondary/30">
+    <section className="py-24 md:py-32">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         <SectionTitle
           title="Educación"

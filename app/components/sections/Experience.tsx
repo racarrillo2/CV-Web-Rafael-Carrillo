@@ -58,7 +58,7 @@ export default function Experience() {
   return (
     <section
       id="experience"
-      className="py-24 md:py-32 bg-background-secondary/30"
+      className="py-24 md:py-32"
     >
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         <SectionTitle
