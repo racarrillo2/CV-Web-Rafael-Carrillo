@@ -33,7 +33,7 @@ export default function Hero() {
 
             <FadeIn delay={0.1}>
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-foreground mb-4">
-                Rafael Carrillo
+Rafael Carrillo Mirabal
               </h1>
             </FadeIn>
 

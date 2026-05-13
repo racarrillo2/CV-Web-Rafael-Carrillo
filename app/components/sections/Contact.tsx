@@ -45,27 +45,29 @@ export default function Contact() {
                   href={method.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="block p-6 rounded-xl bg-background-secondary border border-transparent hover:border-accent/30 transition-all duration-300 text-center group"
+                  className="block p-6 rounded-xl bg-background-secondary border border-transparent hover:border-accent/30 transition-all duration-300 text-center group h-full flex flex-col justify-between"
                   whileHover={{ y: -4 }}
                 >
-                  <motion.div
-                    className="w-14 h-14 rounded-xl mx-auto mb-4 flex items-center justify-center"
-                    whileHover={{ scale: 1.1 }}
-                  >
-                    <Image
-                      src={method.image}
-                      alt={method.label}
-                      width={32}
-                      height={32}
-                      className="w-8 h-8"
-                    />
-                  </motion.div>
-                  <h3 className="text-lg font-semibold text-foreground mb-1 group-hover:text-accent transition-colors">
-                    {method.label}
-                  </h3>
-                  <p className="text-sm text-foreground-secondary">
-                    {method.description}
-                  </p>
+                  <div>
+                    <motion.div
+                      className="w-14 h-14 rounded-xl mx-auto mb-4 flex items-center justify-center"
+                      whileHover={{ scale: 1.1 }}
+                    >
+                      <Image
+                        src={method.image}
+                        alt={method.label}
+                        width={32}
+                        height={32}
+                        className="w-8 h-8"
+                      />
+                    </motion.div>
+                    <h3 className="text-lg font-semibold text-foreground mb-1 group-hover:text-accent transition-colors">
+                      {method.label}
+                    </h3>
+                    <p className="text-sm text-foreground-secondary">
+                      {method.description}
+                    </p>
+                  </div>
                 </motion.a>
               </FadeIn>
             ))}
