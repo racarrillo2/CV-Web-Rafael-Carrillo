@@ -68,10 +68,9 @@ Rafael Carrillo Mirabal
                   Contactar
                 </Button>
                 <Button
-                  href="#"
+                  href="/CV_Rafael_Carrillo_Mirabal.pdf"
                   variant="outline"
                   icon={Download}
-                  onClick={() => {}}
                 >
                   Descargar CV
                 </Button>
