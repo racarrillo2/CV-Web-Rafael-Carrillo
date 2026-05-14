@@ -80,7 +80,7 @@ const experiences = [
 ];
 
 export default function Experience() {
-  const { language } = useTranslation();
+  const { language, t } = useTranslation();
 
   const exps = experiences.map((exp) => ({
     title: language === "es" ? exp.titleEs : exp.titleEn,
@@ -94,8 +94,8 @@ export default function Experience() {
     <section id="experience" className="py-8 md:py-10">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         <SectionTitle
-          title={language === "es" ? "Experiencia Profesional" : "Work Experience"}
-          subtitle={language === "es" ? "Mi trayectoria laboral" : "My professional journey"}
+          title={t("experience.title")}
+          subtitle={t("experience.subtitle")}
         />
 
         <div className="max-w-3xl mx-auto">

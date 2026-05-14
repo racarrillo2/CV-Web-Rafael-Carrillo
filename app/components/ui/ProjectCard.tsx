@@ -23,13 +23,18 @@ export default function ProjectCard({
   image,
   index,
 }: ProjectCardProps) {
+  const href = githubLink || demoLink;
+
   return (
     <FadeIn delay={index * 0.1}>
-      <motion.article
-        className="group relative bg-background-secondary rounded-xl overflow-hidden border border-transparent hover:border-accent/30 transition-all duration-300"
+      <motion.a
+        href={href}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="group block bg-background-secondary rounded-xl overflow-hidden border border-transparent hover:border-accent/30 transition-all duration-300"
         whileHover={{ y: -4 }}
       >
-        <div className="absolute inset-0 bg-gradient-to-br from-accent/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+        <div className="absolute inset-0 bg-gradient-to-br from-accent/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none" />
 
         {image && (
           <div className="h-48 overflow-hidden">
@@ -61,30 +66,20 @@ export default function ProjectCard({
 
           <div className="flex gap-3">
             {githubLink && (
-              <a
-                href={githubLink}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-1.5 text-sm text-foreground-secondary hover:text-accent transition-colors"
-              >
+              <span className="inline-flex items-center gap-1.5 text-sm text-foreground-secondary group-hover:text-accent transition-colors">
                 <Code size={16} />
                 Código
-              </a>
+              </span>
             )}
             {demoLink && (
-              <a
-                href={demoLink}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-1.5 text-sm text-foreground-secondary hover:text-accent transition-colors"
-              >
+              <span className="inline-flex items-center gap-1.5 text-sm text-foreground-secondary group-hover:text-accent transition-colors">
                 <ExternalLink size={16} />
                 Demo
-              </a>
+              </span>
             )}
           </div>
         </div>
-      </motion.article>
+      </motion.a>
     </FadeIn>
   );
 }
