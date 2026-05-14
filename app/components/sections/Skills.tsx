@@ -11,6 +11,7 @@ import {
   Code2,
   Presentation,
 } from "lucide-react";
+import { useTranslation } from "../../hooks/useTranslation";
 
 const dataAnalyticsSkills = [
   { name: "Python", icon: <Code2 size={14} /> },
@@ -28,13 +29,24 @@ const businessSkills = [
   "Resolución de problemas",
 ];
 
+const businessSkillsEn = [
+  "Sales",
+  "Customer Service",
+  "Administrative Management",
+  "Communication",
+  "Problem Solving",
+];
+
 export default function Skills() {
+  const { language, t } = useTranslation();
+  const business = language === "es" ? businessSkills : businessSkillsEn;
+
   return (
     <section id="skills" className="py-12 md:py-16">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         <SectionTitle
-          title="Skills"
-          subtitle="Herramientas técnicas y habilidades blandas"
+          title={t("skills.title")}
+          subtitle={t("skills.subtitle")}
         />
 
         <div className="grid md:grid-cols-2 gap-12">
@@ -44,7 +56,7 @@ export default function Skills() {
                 <span className="p-2 rounded-lg bg-accent/10 text-accent">
                   <TrendingUp size={20} />
                 </span>
-                Análisis de Datos
+                {t("skills.dataAnalytics")}
               </h3>
               <div className="flex flex-wrap gap-3">
                 {dataAnalyticsSkills.map((skill, index) => (
@@ -68,10 +80,10 @@ export default function Skills() {
                 <span className="p-2 rounded-lg bg-accent/10 text-accent">
                   <Presentation size={20} />
                 </span>
-                Habilidades Comerciales
+                {t("skills.business")}
               </h3>
               <div className="flex flex-wrap gap-3">
-                {businessSkills.map((skill, index) => (
+                {business.map((skill, index) => (
                   <motion.div
                     key={skill}
                     initial={{ opacity: 0, scale: 0.8 }}

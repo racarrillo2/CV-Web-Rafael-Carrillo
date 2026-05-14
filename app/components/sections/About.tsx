@@ -3,59 +3,29 @@
 import { motion } from "framer-motion";
 import FadeIn from "../ui/FadeIn";
 import SectionTitle from "../ui/SectionTitle";
-
-const valueProps = [
-  {
-    title: "Experiencia Comercial",
-    description:
-      "Años de experiencia en ventas y atención al cliente me han dado una comprensión profunda del negocio que enriquece mi análisis de datos.",
-  },
-  {
-    title: "Capacidad Analítica",
-    description:
-      "Habilidad para transformar datos complejos en información accionable que impulsan decisiones estratégicas.",
-  },
-  {
-    title: "Adaptabilidad",
-    description:
-      "Transición exitosa del área comercial hacia análisis de datos demuestra mi capacidad de aprendizaje y adaptación.",
-  },
-];
+import { useTranslation } from "../../hooks/useTranslation";
 
 export default function About() {
+  const { t } = useTranslation();
+
+  const valueProps = [
+    { title: t("about.expCommercial"), description: t("about.expCommercialDesc") },
+    { title: t("about.capacidad"), description: t("about.capacidadDesc") },
+    { title: t("about.adaptabilidad"), description: t("about.adaptabilidadDesc") },
+  ];
+
   return (
     <section id="about" className="py-12 md:py-16">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
-        <SectionTitle
-          title="Sobre Mí"
-          subtitle="Conoce mi trayectoria y lo que me diferencia"
-        />
-
+        <SectionTitle title={t("about.title")} subtitle={t("about.subtitle")} />
         <div className="grid md:grid-cols-2 gap-12 items-start">
           <FadeIn>
             <div className="space-y-6">
-              <p className="text-foreground-secondary leading-relaxed text-lg">
-                Mi trayectoria profesional comenzó en el mundo de las ventas y la
-                atención al cliente, donde desarrollé habilidades fundamentales
-                como la comunicación, la resolución de problemas y la orientación
-                a resultados.
-              </p>
-              <p className="text-foreground-secondary leading-relaxed text-lg">
-                Esta experiencia comercial me permitió comprender profundamente
-                cómo funcionan los negocios desde la perspectiva del cliente y
-                del equipo de ventas. Sin embargo, siempre tuve una inclinación
-                natural hacia los números y el análisis.
-              </p>
-              <p className="text-foreground-secondary leading-relaxed text-lg">
-                Decidí dar el paso hacia el análisis de datos para combinar mi
-                visión de negocio con herramientas técnicas que me permiten
-                generar insights más profundos y precisos. El bootcamp de
-                Upgrade HUB me proporcionó las habilidades técnicas necesarias
-                para esta transición.
-              </p>
+              <p className="text-foreground-secondary leading-relaxed text-lg">{t("about.p1")}</p>
+              <p className="text-foreground-secondary leading-relaxed text-lg">{t("about.p2")}</p>
+              <p className="text-foreground-secondary leading-relaxed text-lg">{t("about.p3")}</p>
             </div>
           </FadeIn>
-
           <FadeIn delay={0.2}>
             <div className="space-y-6">
               {valueProps.map((item, index) => (
@@ -71,9 +41,7 @@ export default function About() {
                     <span className="w-2 h-2 rounded-full bg-accent" />
                     {item.title}
                   </h3>
-                  <p className="text-foreground-secondary leading-relaxed">
-                    {item.description}
-                  </p>
+                  <p className="text-foreground-secondary leading-relaxed">{item.description}</p>
                 </motion.div>
               ))}
             </div>

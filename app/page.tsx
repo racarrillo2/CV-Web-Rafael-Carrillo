@@ -7,10 +7,12 @@ import Projects from "./components/sections/Projects";
 import Education from "./components/sections/Education";
 import Contact from "./components/sections/Contact";
 import Footer from "./components/sections/Footer";
+import ThemeInit from "./components/sections/ThemeInit";
 
 export default function Home() {
   return (
     <>
+      <ThemeInit />
       <Navbar />
       <main>
         <Hero />

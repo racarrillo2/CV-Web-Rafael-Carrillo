@@ -6,35 +6,38 @@ import FadeIn from "../ui/FadeIn";
 import SectionTitle from "../ui/SectionTitle";
 import Button from "../ui/Button";
 import { Mail } from "lucide-react";
-
-const contactMethods = [
-  {
-    image: "/imagen_linkedin.svg",
-    label: "LinkedIn",
-    description: "Conectemos profesionalmente",
-    href: "https://www.linkedin.com/in/rafael-carrillo-mirabal/",
-  },
-  {
-    image: "/imagen_github.svg",
-    label: "GitHub",
-    description: "Explora mi código",
-    href: "https://github.com/racarrillo2",
-  },
-  {
-    image: "/imagen_gmail.svg",
-    label: "Email",
-    description: "racm171193@hotmail.com",
-    href: "mailto:racm171193@hotmail.com",
-  },
-];
+import { useTranslation } from "../../hooks/useTranslation";
 
 export default function Contact() {
+  const { language, t } = useTranslation();
+
+  const contactMethods = [
+    {
+      image: "/imagen_linkedin.svg",
+      label: t("contact.linkedin"),
+      description: t("contact.linkedinDesc"),
+      href: "https://www.linkedin.com/in/rafael-carrillo-mirabal/",
+    },
+    {
+      image: "/imagen_github.svg",
+      label: t("contact.github"),
+      description: t("contact.githubDesc"),
+      href: "https://github.com/racarrillo2",
+    },
+    {
+      image: "/imagen_gmail.svg",
+      label: t("contact.email"),
+      description: "racm171193@hotmail.com",
+      href: "mailto:racm171193@hotmail.com",
+    },
+  ];
+
   return (
     <section id="contact" className="py-12 md:py-16">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         <SectionTitle
-          title="Contacto"
-          subtitle="¿Interesado en trabajar juntos? Contáctame"
+          title={t("contact.title")}
+          subtitle={t("contact.subtitle")}
         />
 
         <div className="max-w-3xl mx-auto">
@@ -76,15 +79,14 @@ export default function Contact() {
           <FadeIn delay={0.3}>
             <div className="text-center p-8 rounded-xl bg-gradient-to-br from-accent/10 to-accent-hover/5 border border-accent/20">
               <h3 className="text-xl font-semibold text-foreground mb-2">
-                ¿Listo para trabajar juntos?
+                {t("contact.ready")}
               </h3>
               <p className="text-foreground-secondary mb-6">
-                Siempre estoy abierto a nuevas oportunidades y proyectos
-                interesantes.
+                {t("contact.alwaysOpen")}
               </p>
               <Button href="mailto:racm171193@hotmail.com" variant="primary">
                 <Mail size={18} />
-                Envíame un mensaje
+                {t("contact.sendMessage")}
               </Button>
             </div>
           </FadeIn>
