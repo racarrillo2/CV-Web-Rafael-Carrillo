@@ -23,6 +23,16 @@ const projects: {
     technologies: ["SQL", "Python", "TiDB Cloud"],
     githubLink: "https://github.com/racarrillo2/sql-ai-chat-analytics",
   },
+  {
+    titleEs: "Dashboard Insurance Project Iberia Seguros",
+    titleEn: "Dashboard Insurance Project Iberia Seguros",
+    descriptionEs:
+      "Dashboard de análisis de seguros desarrollado con Microsoft Fabric y Power BI, enfocado en KPIs, rentabilidad, deserción de clientes e insights estratégicos.",
+    descriptionEn:
+      "Insurance analytics dashboard developed with Microsoft Fabric and Power BI, focused on KPIs, profitability, customer churn and strategic insights.",
+    technologies: ["Microsoft Fabric", "Power BI"],
+    githubLink: "https://github.com/racarrillo2/Dashboar-Insurance-Project-Iberica-Seguros-",
+  },
 ];
 
 export default function Projects() {
