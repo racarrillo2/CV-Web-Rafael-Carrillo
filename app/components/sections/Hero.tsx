@@ -17,7 +17,7 @@ const techStack = [
 export default function Hero() {
   return (
     <section className="min-h-screen flex items-center pt-16">
-      <div className="max-w-7xl mx-auto px-6 lg:px-8 py-24 md:py-32">
+      <div className="max-w-7xl mx-auto px-6 lg:px-8 py-12 md:py-16">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <div className="max-w-xl">
             <FadeIn>
@@ -39,7 +39,7 @@ Rafael Carrillo Mirabal
 
             <FadeIn delay={0.2}>
               <h2 className="text-xl md:text-2xl text-accent font-medium mb-6">
-                Data Analyst | Business & Sales Background
+                Analista de Datos | Negocio y Ventas
               </h2>
             </FadeIn>
 

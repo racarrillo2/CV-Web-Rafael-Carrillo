@@ -35,7 +35,7 @@ const experiences = [
     description:
       "Venta y retención de servicios de telecomunicaciones.",
     achievements: [
-      "Emphasis on customer retention",
+      "Énfasis en retención de clientes",
       "Resolución de incidencias",
       "Cumplimiento de objetivos mensuales",
     ],
@@ -58,7 +58,7 @@ export default function Experience() {
   return (
     <section
       id="experience"
-      className="py-24 md:py-32"
+      className="py-12 md:py-16"
     >
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         <SectionTitle

@@ -4,23 +4,12 @@
   --color-background: #F8FAFC;
   --color-background-secondary: #EEF4FF;
   --color-card: #FFFFFF;
-  --color-foreground: #0F172A;
+  --color-foreground: #000000;
   --color-foreground-secondary: #334155;
   --color-accent: #2563EB;
   --color-accent-hover: #3B82F6;
   --color-border: #CBD5E1;
   --font-sans: Inter, sans-serif;
-}
-
-[data-theme="dark"] {
-  --color-background: #0F172A;
-  --color-background-secondary: #1E293B;
-  --color-card: #1E293B;
-  --color-foreground: #F8FAFC;
-  --color-foreground-secondary: #CBD5E1;
-  --color-accent: #3B82F6;
-  --color-accent-hover: #06B6D4;
-  --color-border: #334155;
 }
 
 * {
@@ -32,14 +21,40 @@ html {
 }
 
 body {
-  background: var(--color-background);
-  color: var(--color-foreground);
+  background: linear-gradient(180deg, #FFFFFF 0%, #F8FAFC 50%, #FFFFFF 100%);
+  color: #000000;
   font-family: Inter, sans-serif;
-  transition: background-color 0.3s ease, color 0.3s ease;
+  transition: all 0.3s ease;
+  min-height: 100vh;
 }
 
-[data-theme="dark"] body {
+html.dark body {
   background: linear-gradient(180deg, #0F172A 0%, #111827 50%, #0F172A 100%);
+  color: #FFFFFF;
+}
+
+html.dark .text-foreground {
+  color: #FFFFFF !important;
+}
+
+html.dark .text-foreground-secondary {
+  color: #CBD5E1 !important;
+}
+
+html.dark .text-accent {
+  color: #3B82F6 !important;
+}
+
+html.dark .bg-background {
+  background-color: #0F172A !important;
+}
+
+html.dark .bg-background-secondary {
+  background-color: #1E293B !important;
+}
+
+html.dark .border-border {
+  border-color: #334155 !important;
 }
 
 ::-webkit-scrollbar {
@@ -47,16 +62,24 @@ body {
 }
 
 ::-webkit-scrollbar-track {
-  background: var(--color-background);
+  background: #F8FAFC;
+}
+
+html.dark ::-webkit-scrollbar-track {
+  background: #0F172A;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: var(--color-border);
+  background: #CBD5E1;
   border-radius: 4px;
 }
 
+html.dark ::-webkit-scrollbar-thumb {
+  background: #334155;
+}
+
 ::-webkit-scrollbar-thumb:hover {
-  background: var(--color-accent);
+  background: #2563EB;
 }
 
 @media (prefers-reduced-motion: reduce) {

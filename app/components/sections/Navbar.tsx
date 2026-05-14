@@ -3,6 +3,7 @@
 import { useState, useEffect } from "react";
 import { motion, useScroll } from "framer-motion";
 import { Menu, X } from "lucide-react";
+import ThemeToggle from "./ThemeToggle";
 
 const navLinks = [
   { name: "Sobre mí", href: "#about" },
@@ -37,13 +38,16 @@ export default function Navbar() {
     >
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
-          <motion.a
-            href="#"
-            className="text-xl font-bold text-foreground"
-            whileHover={{ scale: 1.05 }}
-          >
-            RC
-          </motion.a>
+          <div className="flex items-center gap-4">
+            <ThemeToggle />
+            <motion.a
+              href="#"
+              className="text-xl font-bold text-foreground"
+              whileHover={{ scale: 1.05 }}
+            >
+              RC
+            </motion.a>
+          </div>
 
           <div className="hidden md:flex items-center gap-8">
             {navLinks.map((link) => (

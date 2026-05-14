@@ -30,7 +30,7 @@ const contactMethods = [
 
 export default function Contact() {
   return (
-    <section id="contact" className="py-24 md:py-32">
+    <section id="contact" className="py-12 md:py-16">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         <SectionTitle
           title="Contacto"

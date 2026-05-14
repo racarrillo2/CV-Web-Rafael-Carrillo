@@ -30,7 +30,7 @@ const businessSkills = [
 
 export default function Skills() {
   return (
-    <section id="skills" className="py-24 md:py-32">
+    <section id="skills" className="py-12 md:py-16">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         <SectionTitle
           title="Skills"
@@ -39,12 +39,12 @@ export default function Skills() {
 
         <div className="grid md:grid-cols-2 gap-12">
           <FadeIn>
-            <div className="p-6 rounded-xl bg-background-secondary/50 border border-accent/10">
+            <div className="p-6 rounded-xl bg-background-secondary border border-accent/10">
               <h3 className="text-xl font-semibold text-foreground mb-6 flex items-center gap-3">
                 <span className="p-2 rounded-lg bg-accent/10 text-accent">
                   <TrendingUp size={20} />
                 </span>
-                Data Analytics
+                Análisis de Datos
               </h3>
               <div className="flex flex-wrap gap-3">
                 {dataAnalyticsSkills.map((skill, index) => (
@@ -63,12 +63,12 @@ export default function Skills() {
           </FadeIn>
 
           <FadeIn delay={0.2}>
-            <div className="p-6 rounded-xl bg-background-secondary/50 border border-accent/10">
+            <div className="p-6 rounded-xl bg-background-secondary border border-accent/10">
               <h3 className="text-xl font-semibold text-foreground mb-6 flex items-center gap-3">
                 <span className="p-2 rounded-lg bg-accent/10 text-accent">
                   <Presentation size={20} />
                 </span>
-                Business Skills
+                Habilidades Comerciales
               </h3>
               <div className="flex flex-wrap gap-3">
                 {businessSkills.map((skill, index) => (

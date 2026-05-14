@@ -8,23 +8,23 @@ const valueProps = [
   {
     title: "Experiencia Comercial",
     description:
-      "Años de experiencia en ventas y atención al cliente me han dado una comprensión profunda del negocio que enrichace mi análisis de datos.",
+      "Años de experiencia en ventas y atención al cliente me han dado una comprensión profunda del negocio que enriquece mi análisis de datos.",
   },
   {
     title: "Capacidad Analítica",
     description:
-      "Habilidad para transformar datos complejos en insights accionables que impulsan decisiones estratégicas.",
+      "Habilidad para transformar datos complejos en información accionable que impulsan decisiones estratégicas.",
   },
   {
     title: "Adaptabilidad",
     description:
-      "Transición exitosa del área comercial hacia数据分析 demuestra mi capacidad de aprendizaje y adaptación.",
+      "Transición exitosa del área comercial hacia análisis de datos demuestra mi capacidad de aprendizaje y adaptación.",
   },
 ];
 
 export default function About() {
   return (
-    <section id="about" className="py-24 md:py-32">
+    <section id="about" className="py-12 md:py-16">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         <SectionTitle
           title="Sobre Mí"
