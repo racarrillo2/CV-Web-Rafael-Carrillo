@@ -14,7 +14,7 @@ export default function Hero() {
 
   return (
     <section className="min-h-screen flex items-center pt-16">
-      <div className="max-w-7xl mx-auto px-6 lg:px-8 py-12 md:py-16">
+      <div className="max-w-7xl mx-auto px-6 lg:px-8 py-8 md:py-10">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <div className="max-w-xl">
             <FadeIn>

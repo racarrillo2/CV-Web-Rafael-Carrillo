@@ -35,7 +35,16 @@ export default function Navbar() {
     });
     const saved = localStorage.getItem("language");
     if (saved) setLanguage(saved);
-    return () => unsubscribe();
+
+    const handleLanguageChange = (e: CustomEvent) => {
+      setLanguage(e.detail);
+    };
+    window.addEventListener("languageChange", handleLanguageChange as EventListener);
+    
+    return () => {
+      unsubscribe();
+      window.removeEventListener("languageChange", handleLanguageChange as EventListener);
+    };
   }, [scrollY]);
 
   const t = (key: string): string => translations[language as keyof typeof translations]?.[key as keyof typeof translations.es] || key;

@@ -42,7 +42,7 @@ export default function Skills() {
   const business = language === "es" ? businessSkills : businessSkillsEn;
 
   return (
-    <section id="skills" className="py-12 md:py-16">
+    <section id="skills" className="py-8 md:py-10">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         <SectionTitle
           title={t("skills.title")}

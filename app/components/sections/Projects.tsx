@@ -60,7 +60,7 @@ export default function Projects() {
   }));
 
   return (
-    <section id="projects" className="py-12 md:py-16">
+    <section id="projects" className="py-8 md:py-10">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         <SectionTitle
           title={language === "es" ? "Proyectos" : "Projects"}

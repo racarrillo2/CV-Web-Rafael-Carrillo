@@ -15,7 +15,7 @@ export default function About() {
   ];
 
   return (
-    <section id="about" className="py-12 md:py-16">
+    <section id="about" className="py-8 md:py-10">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         <SectionTitle title={t("about.title")} subtitle={t("about.subtitle")} />
         <div className="grid md:grid-cols-2 gap-12 items-start">

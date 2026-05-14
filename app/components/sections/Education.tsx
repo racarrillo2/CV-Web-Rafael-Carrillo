@@ -44,7 +44,7 @@ export default function Education() {
   const { language, t } = useTranslation();
 
   return (
-    <section className="py-12 md:py-16">
+    <section className="py-8 md:py-10">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         <SectionTitle
           title={t("education.title")}

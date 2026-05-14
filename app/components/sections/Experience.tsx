@@ -6,11 +6,12 @@ import { useTranslation } from "../../hooks/useTranslation";
 
 const experiences = [
   {
-    title: "Asistente Administrativo",
+    titleEs: "Asistente Administrativo",
+    titleEn: "Administrative Assistant",
     company: "Mutua Madrileña",
     period: "2022 - 2023",
-    description:
-      "Gestión administrativa y atención al cliente en el sector asegurador.",
+    descriptionEs: "Gestión administrativa y atención al cliente en el sector asegurador.",
+    descriptionEn: "Administrative management and customer service in the insurance sector.",
     achievementsEs: [
       "Atención al cliente de manera eficiente",
       "Gestión de documentación y procedimientos administrativos",
@@ -23,11 +24,12 @@ const experiences = [
     ],
   },
   {
-    title: "Consultor de Ventas",
+    titleEs: "Consultor de Ventas",
+    titleEn: "Sales Consultant",
     company: "ACCOM (Naturgy)",
     period: "2021 - 2022",
-    description:
-      "Consulta y venta de servicios de energía para clientes residenciales.",
+    descriptionEs: "Consulta y venta de servicios de energía para clientes residenciales.",
+    descriptionEn: "Consultation and sale of energy services for residential customers.",
     achievementsEs: [
       "Alta tasa de conversión de ventas",
       "Gestión de cartera de clientes",
@@ -40,11 +42,12 @@ const experiences = [
     ],
   },
   {
-    title: "Agente de Ventas y Retención",
+    titleEs: "Agente de Ventas y Retención",
+    titleEn: "Sales and Retention Agent",
     company: "Lowi",
     period: "2020 - 2021",
-    description:
-      "Venta y retención de servicios de telecomunicaciones.",
+    descriptionEs: "Venta y retención de servicios de telecomunicaciones.",
+    descriptionEn: "Sales and retention of telecommunications services.",
     achievementsEs: [
       "Énfasis en retención de clientes",
       "Resolución de incidencias",
@@ -57,11 +60,12 @@ const experiences = [
     ],
   },
   {
-    title: "Chef / Encargado de Cocina",
+    titleEs: "Chef / Encargado de Cocina",
+    titleEn: "Chef / Kitchen Manager",
     company: "Restaurantes Madrid",
     period: "2016 - 2020",
-    description:
-      "Gestión de cocina en restaurantes de alta demanda.",
+    descriptionEs: "Gestión de cocina en restaurantes de alta demanda.",
+    descriptionEn: "Kitchen management in high-demand restaurants.",
     achievementsEs: [
       "Liderazgo de equipos de cocina",
       "Gestión de inventario y pedidos",
@@ -78,8 +82,16 @@ const experiences = [
 export default function Experience() {
   const { language } = useTranslation();
 
+  const exps = experiences.map((exp) => ({
+    title: language === "es" ? exp.titleEs : exp.titleEn,
+    company: exp.company,
+    period: exp.period,
+    description: language === "es" ? exp.descriptionEs : exp.descriptionEn,
+    achievements: language === "es" ? exp.achievementsEs : exp.achievementsEn,
+  }));
+
   return (
-    <section id="experience" className="py-12 md:py-16">
+    <section id="experience" className="py-8 md:py-10">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         <SectionTitle
           title={language === "es" ? "Experiencia Profesional" : "Work Experience"}
@@ -88,16 +100,16 @@ export default function Experience() {
 
         <div className="max-w-3xl mx-auto">
           <div className="pl-4">
-            {experiences.map((exp, index) => (
+            {exps.map((exp, index) => (
               <TimelineItem
                 key={exp.company}
                 title={exp.title}
                 company={exp.company}
                 period={exp.period}
                 description={exp.description}
-                achievements={language === "es" ? exp.achievementsEs : exp.achievementsEn}
+                achievements={exp.achievements}
                 index={index}
-                isLast={index === experiences.length - 1}
+                isLast={index === exps.length - 1}
               />
             ))}
           </div>

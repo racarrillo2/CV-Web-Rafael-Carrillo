@@ -1,13 +1,8 @@
 "use client";
 
-import { useState, useEffect, createContext, useContext } from "react";
+import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { Globe, ChevronDown } from "lucide-react";
-
-const LanguageContext = createContext<{
-  language: string;
-  setLanguage: (lang: string) => void;
-} | null>(null);
 
 export default function LanguageToggle() {
   const [language, setLanguageState] = useState("es");
@@ -18,11 +13,18 @@ export default function LanguageToggle() {
     setMounted(true);
     const saved = localStorage.getItem("language");
     if (saved) setLanguageState(saved);
+    
+    const handleLanguageChange = (e: CustomEvent) => {
+      setLanguageState(e.detail);
+    };
+    window.addEventListener("languageChange", handleLanguageChange as EventListener);
+    return () => window.removeEventListener("languageChange", handleLanguageChange as EventListener);
   }, []);
 
   const setLanguage = (lang: string) => {
     setLanguageState(lang);
     localStorage.setItem("language", lang);
+    window.dispatchEvent(new CustomEvent("languageChange", { detail: lang }));
     setIsOpen(false);
   };
 
